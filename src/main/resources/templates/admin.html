@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Username Generator</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+   	<div th:replace="fragments/header :: header-css"/>
+   
+</head>
+<body>
+
+<div th:replace="fragments/header :: header"/>
+
+<div class="container" style="min-height: 500px">
+
+    <div class="starter-template">
+        <h1>List Item Administration</h1>
+
+        <div id="feedback"></div>
+
+        <form class="form-horizontal" id="listItem-form">
+            <div class="form-group form-group-lg">
+                <label class="col-sm-2 control-label">Value</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="value"/>
+                </div>
+            </div>
+            
+            <div class="form-group form-group-lg">
+                <label class="col-sm-2 control-label">Type</label>
+                <div class="col-sm-4">
+                   <select class="form-control" id="type">
+					  <option>BLACK_ITEM</option>
+					  <option>WHITE_ITEM</option>
+					</select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" id="bth-save"
+                            class="btn btn-primary btn-lg">Create
+                    </button>
+                </div>
+            </div>
+        </form>
+        
+    <h1>List Items</h1>
+    <p>Type BLACK_ITEM means a forbidden list words and WHITE_ITEM allowed word used to generate suggested usernames</p>
+	<table id="listItemsTable" class="display">
+      
+       <!-- Header Table -->
+       <thead>
+            <tr>
+                <th>valor</th>
+                <th>valor</th>
+                <th>valor</th>
+            </tr>
+        </thead>
+        <!-- Footer Table -->
+        <tfoot>
+            <tr>
+                <th>valor</th>
+                <th>valor</th>
+                <th>valor</th>
+            </tr>
+        </tfoot>
+    </table>
+
+    </div>
+
+</div>
+
+<div th:replace="fragments/footer :: footer"/>
+
+</body>
+</html>
